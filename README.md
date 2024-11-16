@@ -30,7 +30,7 @@ arduino-cli config init
 Stvaranje novog projekta (*Arduino Sketch*):
 
 ```
-arduino-cli sketch new [Ime projekta]
+arduino-cli sketch new [ime projekta]
 ```
 
 Projekt sadrži izvorne datoteke i biblioteke potrebne za prevođenje. Datoteka koja se u projektu nalazi je ```[Ime projekta].ino``` koja sadržava početnu šablonu koda. Datoteku se može uređivati bilo kojim uređivačem teksta (```nano```, ```gedit```, ```code```, ...).
@@ -55,7 +55,7 @@ FQBN (*eng. Fully Qualified Board Name*) se koristi za identificiranje pločice 
 Saznavanje FQBN za specifičnu pločicu se može napraviti naredbom:
 
 ```
-arduino-cli board search [Ime pločice]
+arduino-cli board search [ime pločice]
 ```
 
 Za Arduino Nano je FQBN ```arduino:avr:nano```.
@@ -63,18 +63,18 @@ Za Arduino Nano je FQBN ```arduino:avr:nano```.
 Pretraga biblioteka s Arduino repozitorija moguće je naredbom:
 
 ```
-arduino-cli lib search [Ime biblioteke]
+arduino-cli lib search [ime biblioteke]
 ```
 
 Instalacija biblioteke s Arduino repozitorija moguće je naredbom:
 
 ```
-arduino-cli lib install [Ime biblioteke]
+arduino-cli lib install [ime biblioteke]
 ```
 
 Primjerice, biblioteku RadioHead moguće je instalirati naredbom ```arduino-cli install search RadioHead```.
 
-Prevođenje datoteke ```[Ime projekta].ino``` moguće je naredbom:
+Prevođenje datoteke ```[ime projekta].ino``` moguće je naredbom:
 
 ```
 arduino-cli compile --fqbn [FQBN] [.ino datoteka]
@@ -85,13 +85,13 @@ Za starije Arduino Nano pločice potrebno FQBN treba biti ```arduino:avr:nano:cp
 Prijenos prevedene binarne datoteke:
 
 ```
-arduino-cli upload -p [Datoteka uređaja koja predstavlja pločicu] --fqbn [FQBN] [.ino datoteka]
+arduino-cli upload -p [datoteka uređaja koja predstavlja pločicu] --fqbn [FQBN] [.ino datoteka]
 ```
 
 Otvaranje serijske veze između računala i pločice može se napraviti naredbom:
 
 ```
-arduino-cli monitor -p [Datoteka uređaja koja predstavlja pločicu] --config [Baud]
+arduino-cli monitor -p [datoteka uređaja koja predstavlja pločicu] --config [baud]
 ```
 
 Kombinacija tipki *Ctrl + C* prekida serijsku vezu.
@@ -132,7 +132,7 @@ Gotovi programi se nalaze u direktoriju [*transmitter*](transmitter) za odašilj
 ```
         +--------------+          +--------------+                +--------------+          +--------------+
         | ARDUINO   5V +----------+ 5V    TX     |                | ARDUINO   5V +----------+ 5V    RX     |
-        | NANO         |          |       MODULE |                | NANO         |          |       MODULE |
+        | NANO         |          |       MODUL  |                | NANO         |          |       MODUL  |
         |          D12 +----------+              |                |          D11 +----------+              |
         |              |          |              |                |              |          |              |
         |          GND +----------+ GND          |                |          GND +----------+ GND          |
