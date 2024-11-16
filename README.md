@@ -132,7 +132,7 @@ Gotovi programi se nalaze u direktoriju [*transmitter*](transmitter) za odašilj
 ```
         +--------------+          +--------------+                +--------------+          +--------------+
         | ARDUINO   5V +----------+ 5V    TX     |                | ARDUINO   5V +----------+ 5V    RX     |
-        | NANO         |          |       MODUL  |                | NANO         |          |       MODUL  |
+        | NANO         |          |       MODULE |                | NANO         |          |       MODULE |
         |          D12 +----------+              |                |          D11 +----------+              |
         |              |          |              |                |              |          |              |
         |          GND +----------+ GND          |                |          GND +----------+ GND          |
